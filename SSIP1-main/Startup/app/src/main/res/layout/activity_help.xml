@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Help"
+    android:scrollbars="horizontal"
+    android:background="@color/white"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolabar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/headings">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ExtraText">
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="Medical Device"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+
+                />
+
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/bacl"
+
+
+                />
+
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolabar"
+        android:id="@+id/step11"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/step1"
+            android:textColor="@color/black"
+
+            android:textSize="20dp"
+            android:text="Step 1 :- Just Simply press on mic symbol to enter symptoms."
+
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/s1"
+            android:layout_below="@id/step1"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/step11"
+        android:id="@+id/step12"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/step2"
+            android:textColor="@color/black"
+
+            android:textSize="20dp"
+            android:text="Step 2 :- Now enter symptoms using speech recognition. So that corresponding disease would be predicted."
+
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/s2"
+            android:layout_below="@id/step2"
+            />
+    </RelativeLayout>
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/step12"
+        android:id="@+id/step13"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/step3"
+            android:textColor="@color/black"
+
+            android:textSize="20dp"
+            android:text="Step 3 :- You get list of predicted disease with appropriate doctor details,hospital details and corresponding location map."
+
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/s3"
+            android:layout_below="@id/step3"
+            />
+
+
+    </RelativeLayout>
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/step13"
+        android:id="@+id/step14"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/step4"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:text="Step 4 :- It shows appropriate information of doctor , hospital and location along with google maps."
+
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/s4"
+            android:layout_below="@id/step4"
+            />
+
+
+    </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout android:id="@+id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolabar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/headings">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ExtraText">
+
+
+            <ImageView
+                android:id="@+id/call"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/call"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="Medical Device"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+
+                />
+
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/asking"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolabar"
+            android:src="@drawable/ic_consultant"
+            android:alpha="0.3"
+            />
+
+
+        <TextView
+            android:id="@+id/txtSpeechInput"
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolabar"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_cards"
+            android:textColor="@color/black"
+            android:textColorHint="@color/white"
+            android:textSize="18sp"
+            android:layout_margin="6dp"
+
+            android:padding="10dp"
+            android:textStyle="normal"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/conditions_layout"
+            android:layout_width="match_parent"
+            android:layout_below="@id/txtSpeechInput"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_cards"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            tools:ignore="NotSibling">
+
+            <TextView
+                android:id="@+id/conditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:minWidth="310dp"
+                android:padding="10dp"
+                android:text="You may be suffering from one of the following conditions:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:gravity="start"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler1"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/conditions"
+
+                />
+
+            <Button
+                android:id="@+id/start_again"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/bottom_rounded_buttons"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Add more symptoms"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="19sp"
+                android:typeface="sans"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler1" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomlayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:minHeight="48dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="45dp"
+            android:id="@+id/SymptomsText"
+            android:maxLines="6"
+            android:layout_marginBottom="13dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:hint="Hey Give me Symptoms"
+            android:inputType="textMultiLine"
+            android:linksClickable="true"
+            android:nestedScrollingEnabled="true"
+            android:scrollbars="vertical"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textColorHighlight="@color/colorAccent"
+            android:textColorHint="	#A9A9A9"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="16dp" />
+
+
+        <ImageButton
+            android:id="@+id/btnSpeak"
+            android:layout_width="64dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/microphone"
+
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>
